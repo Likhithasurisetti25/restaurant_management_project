@@ -16,6 +16,10 @@ class MenuView(APIView):
         menu=[{"name":"Panner Butter Masala","description":"Creamy cottage chese curry","price":150},
         {"name":"Veg Biryani","description":"spicy vegetable rice","price":120},{"name":"Gulab Jam","description":"sweet dessert","price":50}]
         return Response(menu,status=status.HTTP_200_OK)
+def show_menu(request):
+    response=requests.get("http://127.0.0.1:8000/api/menu")
+    menu=response.json()
+    return render(request,'menu.html',{'menu':menu})
 class ItemView(APIView):
 
     def get(self, request):
