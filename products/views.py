@@ -11,6 +11,11 @@ NOTE: Conside this as a reference and follow this same coding structure or forma
 '''
 
 # Create your views here.
+class MenuView(APIView):
+    def get(self,request):
+        menu=[{"name":"Panner Butter Masala","description":"Creamy cottage chese curry","price":150},
+        {"name":"Veg Biryani","description":"spicy vegetable rice","price":120},{"name":"Gulab Jam","description":"sweet dessert","price":50}]
+        return Response(menu,status=status.HTTP_200_OK)
 class ItemView(APIView):
 
     def get(self, request):
