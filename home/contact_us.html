@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h2>Our Restaurant Location</h2>
-        <p>Kukatpalli Main Street,Hyderabad,India</p>
-        <iframe>
-            src="http://www.google.com/maps/embed?pb"
-            width="600"
-            height="450"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <h2>Contact Us</h2>
+        <form method="POST">
+            {{form.as_p}}
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>
