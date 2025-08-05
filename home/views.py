@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
+def home(request):
+    return render(request,'home/home.html')
 def Contact_us(request):
     if request.method=='POST':
         form=ContactForm(request.POST)
