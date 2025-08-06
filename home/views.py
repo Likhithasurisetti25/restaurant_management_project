@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from .models import Restaurant
+def homepage(request):
+    restaurant=Restaurant.objects.first()
+    return render(request,'home/home.html',{'restaurant_name':restaurant_name})
 def restaurant_location(request):
     return render(request,'home/restaurant_location.html')
 def Contact_us(request):
