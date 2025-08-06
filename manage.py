@@ -2,6 +2,9 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from home.models import Restaurant
+Restaurant.objects.create(name="Likhitha Kitchen")
+exit()
 
 
 def main():
